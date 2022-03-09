@@ -1,10 +1,4 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Mar  8 14:35:13 2022
-
-@author: ithal
-"""
-
 from flask import Flask, request
 from flask_pydantic_spec import FlaskPydanticSpec, Response, Request
 from pydantic import BaseModel
@@ -33,7 +27,8 @@ def QA_devs():
 def envia_nome():
     """ Verifica Nome para informar sobrenome"""
     x = request.context.body.dict()
-    #Não consegui entender bem a sintaxe do body, então converti o json gerado para conseguir validar o nome obtido
+    
+    #Não consegui entender bem a sintaxe do body, então converti o json gerado para conseguir validar o nome obtido // Gambi Soluções Corp.
     y = json.dumps(x)
     
     if '"Ithalo"' in y:
